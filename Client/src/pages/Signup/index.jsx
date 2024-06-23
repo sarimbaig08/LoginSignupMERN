@@ -41,9 +41,9 @@ const Signup = () => {
     };
     console.log("Function", obj);
     try {
-      const response = await axios.post(`${BASE_URL}/userSignup`, obj);
-      alert("User created");
-      console.log(response);
+      const response = await axios.post(`${BASE_URL}/userSingup`, obj);
+      alert(response.data.message);
+      console.log();
     } catch (error) {
       alert(error.message);
     }
